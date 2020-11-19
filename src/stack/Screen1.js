@@ -7,7 +7,9 @@ export default class Screen1 extends Component {
     return (
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <Text style={{fontSize: 20}}> Screen 1 </Text>
-        <TouchableOpacity style={{backgroundColor: 'red', padding: 10}}>
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate('Screen2')}
+          style={{backgroundColor: 'red', padding: 10}}>
           <Text style={{fontSize: 20}}>Navigate Screen 2</Text>
         </TouchableOpacity>
       </View>
