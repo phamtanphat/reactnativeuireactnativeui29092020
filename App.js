@@ -14,7 +14,11 @@ export default class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Screen1" component={Screen1} />
+          <Stack.Screen
+            name="Screen1"
+            component={Screen1}
+            initialParams={{text: 'Hello screen 2'}}
+          />
           <Stack.Screen name="Screen2" component={Screen2} />
           <Stack.Screen name="Screen3" component={Screen3} />
         </Stack.Navigator>
