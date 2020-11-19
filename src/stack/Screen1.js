@@ -1,6 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
 import {Text, View, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class Screen1 extends Component {
   constructor(props) {
@@ -24,7 +25,9 @@ export default class Screen1 extends Component {
             })
           }
           style={{backgroundColor: 'red', padding: 10}}>
-          <Text style={{fontSize: 20}}>Navigate Screen 2</Text>
+          <Text style={{fontSize: 20}}>
+            Navigate Screen 2 <Icon name="rocket" size={30} color="blue" />
+          </Text>
         </TouchableOpacity>
       </View>
     );
