@@ -8,7 +8,10 @@ export default class Screen2 extends Component {
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <Text style={{fontSize: 20}}> Screen 2 </Text>
         <TouchableOpacity
-          onPress={() => this.props.navigation.goBack()}
+          onPress={() => {
+            this.props.route.params.onInCrease();
+            this.props.navigation.goBack();
+          }}
           style={{backgroundColor: 'blue', padding: 10}}>
           <Text style={{fontSize: 20}}>Go Back</Text>
         </TouchableOpacity>

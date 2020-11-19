@@ -9,13 +9,19 @@ export default class Screen1 extends Component {
       count: 0,
     };
   }
+  onInCrease = () => {
+    this.setState({count: this.state.count + 1});
+  };
   render() {
     return (
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <Text style={{fontSize: 20}}> Count {this.state.count} </Text>
         <TouchableOpacity
           onPress={() =>
-            this.props.navigation.navigate('Screen2', {count: this.state.count})
+            this.props.navigation.navigate('Screen2', {
+              count: this.state.count,
+              onInCrease: this.onInCrease,
+            })
           }
           style={{backgroundColor: 'red', padding: 10}}>
           <Text style={{fontSize: 20}}>Navigate Screen 2</Text>
